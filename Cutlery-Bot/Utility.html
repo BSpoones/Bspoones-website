@@ -1,7 +1,95 @@
 <!DOCTYPE html>
-<head>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- Importing the needed files for the nav bar and side bar to work -->
+    <link rel="stylesheet" href="../css/global-nav.css">
+    <script src="../js/global-nav.js"></script>
+    <script>
+      function blueHamburger(element) { // Changes the colour of the nav icon on hover
+        element.setAttribute('src', '../assets/blue hamburger.png');
+      }
 
-</head>
-<body>
-    This is the utility page
-</body>
+      function whiteHamburger(element) { // Changes the colour of the nav icon on hover
+        element.setAttribute('src', '../assets/white hamburger.png');
+      }
+    </script>
+    <!-- Sets the browser tab icon to be the company logo -->
+    <link rel="icon" href="../assets/icon.jpg" sizes="16x16">
+  </head>
+  <title>Cutlery Bot | Utility</title>
+  <body>
+    <!-- This div is used in each page and has all elements for a navigation bar-->
+    <div class="gloal-nav">
+      <div class="top-bar">
+        <!-- All elements on the top bar -->
+        <div class="openbtn">
+          <img clas="openbtn" src="../assets/white hamburger.png" alt="Open Menu" height="36" width="36" onmouseover="blueHamburger(this)" onmouseout="whiteHamburger(this)" onclick="openNav()">
+          <!-- Top logo also linking to homepage -->
+          <div class="top-logo">
+            <a href="../index.html">
+              <img src="../assets/flat logo.png" alt="Home" height="50px" width="325px">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- This div contains all the elements for the dissapearing side bar -->
+      <div id="sidenav" class="sidenav">
+        <div>
+          <img class="closebtn" src="../assets/white hamburger.png" alt="Close Menu" height="36" width="36" onmouseover="blueHamburger(this)" onmouseout="whiteHamburger(this)" onclick="closeNav()">
+        </div>
+        <div class="items">
+          <div class="top">
+            <a href="../index.html">Home</a>
+            <a href="./Admin.html">Admin</a>
+            <a href="./Fun.html">Fun</a>
+            <a href="./Logging.html">Logging</a>
+            <a href="./Reminder.html">Reminder</a>
+            <a href="./Timetable.html">Timetable</a>
+            <a href="./Utility.html">Utility</a>
+            <a href="https://www.github.com/bspoones">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- This div contains all the elements in the main section of the page -->
+    <div id="main">
+      <div class="header">
+        <br>
+        <br>
+        <br>
+        <h1>Cutlery Bot</h1>
+        <hr>
+        <br>
+      </div>
+      <!-- This div is used for the full page header image -->
+      <!-- The white box where page contents are placed -->
+      <div class="content" id="content">
+        <div class="outer-box">
+          <h2>Utility</h2>
+          <hr style="width: 70vw;">
+          <div class="container">
+            <!-- Used to make a row of zig-zag elements -->
+            <div class="content-row">
+              <h2>Utility page</h2>
+              <p>Welcome to the Utility module</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Used in each webpage to give a link to Soones.com -->
+      <div class="global-footer">
+        <br>
+        <br>
+        <br>
+        <span class="border">
+          <a href="https://www.bspoones.com/" target="_blank">BSpoones 2022</a>
+        </span>
+        <br>
+        <br>
+      </div>
+    </div>
+  </body>
+</html>
