@@ -1,116 +1,345 @@
-.wrapper {
-    text-align: center;
-}
-.footer_img{
-    position: fixed;
-    left: 50%;
-    bottom: 0px;
-    transform: translate(-50%);
-    margin: 0 auto;
-}
-html { 
-    background: url(../Assets/background.png) no-repeat center center fixed; 
+/* Sets global background to be geometric, made with https://trianglify.io/ */
+/* Mobile view */
+@media only screen and (max-width: 860px) {
+  html {
+    background: url(../assets/background.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    scroll-behavior: smooth;
   }
-body {
-background-size: none;
-margin-left: 0%;
-text-align: center;
-}
-ul {
-margin: 0px auto;
-padding: 0px;
-list-style: none;
-font-family: sans-serif;
-}
 
-ul li {
-float: left;
-width: 200px;
-height: 40px;
-background-color: black;
-opacity: .9;
-line-height: 40px;
-text-align: center;
-font-size: 20px;
-}
+  body {
+    padding-top: 20px;
+    margin: 0;
+    /* Prevents bars from appearing on the left and right */
+    font-family: "Lato", sans-serif;
+  }
+  .header {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+  }
+  /* Global footer */
 
-ul li a {
-text-decoration: none;
-color: white;
-display: block;
-}
+  .global-footer {
+    width: 100%;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
 
-ul li a:hover {
-background-color:crimson;
+  /* Border around global footer */
 
-}
+  .global-footer span.border {
+    background-color: #242424;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
 
-ul li ul li{
-display: none;
-}
+  .global-footer a {
+    text-decoration: none;
+    color: white;
+  }
 
-ul li:hover ul li {
-display: block;
-transition: 0.5s;
-}
-.nav_bar{
-    display: flex;
-    justify-content: center;
-}
-h1,h2{
-    color:white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.bg{
-    background-image: url("background.png");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.cental_column{
-    display: flex;
-    justify-content: center;
-}
-.central_row{
+  /* Creates white box */
+
+  .content {
     font-family: sans-serif;
     font-size: 130%;
     margin: auto;
+    width: 100vw;
+    background-color: rgba(255, 255, 255);
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .outer-box {
+    text-align: center;
+    width: 100vw;
+  }
+
+  .header span {
+    display: flex;
+    text-shadow: #242424;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  /* Ensures each row formats correctly */
+
+  .content-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+
+  /* Adds white space on left and right of content box */
+  .container {
+    padding: 64px;
+    /* width: 70vw; */
+    position: inherit;
+    justify-content: center;
+
+    /* text-align: justify; */
+  }
+
+  /* Zig-zag layout */
+
+  .column-66 {
+    float: left;
     width: 50%;
+    padding: 20px;
+  }
+
+  .column-33 {
+    float: left;
+    width: 40%;
+    text-align: center;
+  }
+
+  .column-33 img {
+    width: 100%;
+  }
+  table {
+    border: 1px black;
+
+    text-align: center;
+  }
+  thead {
+    display: block;
+    text-align: left;
+    color: white;
+    border: 1px solid crimson;
+    background-color: crimson;
+  }
+  th,
+  td {
+    width: 250px;
+    border: 1px black;
+
+    text-align: center;
+  }
+  tbody {
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: block;
+    border: 1px black;
+
+    border: 1px solid black;
+  }
+  tfoot {
+    text-align: center;
+    color: white;
+    background-color: black;
+  }
+
+  .column-66,
+  .column-33 {
+    width: 100%;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 860px) {
+  html {
+    background: url(../assets/background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    /* Prevents bars from appearing on the left and right */
+    font-family: "Lato", sans-serif;
+  }
+  .header {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+  }
+  /* Global footer */
+
+  .global-footer {
+    width: 100%;
+    display: block;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  /* Border around global footer */
+
+  .global-footer span.border {
+    background-color: #242424;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+
+  .global-footer a {
+    text-decoration: none;
+    color: white;
+  }
+
+  /* Creates white box */
+
+  .content {
+    font-family: sans-serif;
+    font-size: 130%;
+    margin: auto;
+    width: 80%;
     padding: 5px;
     background-color: white;
     display: flex;
+    position: auto;
     justify-content: center;
-}
-table{
-    border:1px black;
-    justify-content: center;
-    margin:auto;
+  }
+
+  .outer-box {
     text-align: center;
-}
-thead{
-    display:block;
-    text-align:left;
-    border:1px solid blue;
-    background-color: skyblue;
+  }
+
+  .header span {
+    display: flex;
+    text-shadow: #242424;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  /* Ensures each row formats correctly */
+
+  .content-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Header caption */
+
+  .caption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: auto;
+    height: auto;
+    text-align: center;
+    color: #000;
+    transform: translate(-50%, -50%);
+  }
+
+  .caption span.border {
+    background-color: #242424;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 6px;
+  }
+
+  /* Header scrolldown button */
+
+  .scrolldown {
+    position: absolute;
+    justify-content: center;
+    left: 50%;
+    bottom: 0%;
+    width: auto;
+    height: auto;
+    text-align: center;
+    color: #000;
+    transform: translate(-55%, -50%);
+  }
+
+  .scrolldown img {
+    width: 5vw;
+    height: auto;
+  }
+
+  /* Adds white space on left and right of content box */
+  .container {
+    padding: 64px;
+    width: 70vw;
+    position: inherit;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+  }
+
+  /* Zig-zag layout */
+
+  .column-66 {
+    float: left;
+    width: 50%;
+    padding: 20px;
+  }
+
+  .column-33 {
+    float: left;
+    width: 40%;
+    text-align: center;
+  }
+
+  .column-33 img {
+    width: 100%;
+  }
+  table {
+    border: 1px black;
+
+    text-align: center;
+  }
+  thead {
+    display: block;
+    text-align: left;
+    color: white;
+    border: 1px solid crimson;
+    background-color: crimson;
+  }
+  th,
+  td {
+    width: 250px;
+    border: 1px black;
+
+    text-align: center;
+  }
+  tbody {
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: block;
+    border: 1px black;
+
+    border: 1px solid black;
+  }
+  tfoot {
+    text-align: center;
+    color: white;
+    background-color: black;
+  }
+
+  /* Ensure page looks correct on small devices */
+
+  @media screen and (max-width: 1150px) {
+    .column-66,
+    .column-33 {
+      width: 100%;
+      text-align: left;
     }
-th, td{
-    width:180px;
-    text-align: center;
-}
-tbody{
-    height:90px;
-    overflow-y:auto;
-    overflow-x:hidden;
-    display:block;
-    border:1px solid black;
-}
-tfoot{
-    text-align:center;
-    color:white;
-    background-color:black;
+
+    .container img {
+      margin: auto;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
